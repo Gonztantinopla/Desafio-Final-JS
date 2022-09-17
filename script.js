@@ -23,7 +23,7 @@ class Cotizacion {
 function userNuevo() {
     Swal.fire({
         title: '¡Bienvenido!',
-        text: 'porfavor ingresa tu nombre a continuación',
+        text: 'por favor ingresa tu nombre a continuación',
         input: 'text',
         inputAutoTrim: true,
     }).then((result) => {
@@ -68,7 +68,7 @@ const botonCalcular = document.getElementById("botonCalcular")
 botonCalcular.addEventListener("click", calcular)
 
 // const BtonLoadStorage = document.getElementById("botonLoadStorage")
-// BtonLoadStorage.addEventListener("click", recuperarCotizaciones)   BOTON DE RECARGAR CALCULOS ANTERIORES ANULADO
+// BtonLoadStorage.addEventListener("click", recuperarCotizaciones)   BOTÓN DE RECARGAR CÁLCULOS ANTERIORES ANULADO
 
 
 function calcular() {
@@ -84,7 +84,7 @@ function calcular() {
         let cuotas = document.getElementById("cuotas").value
         precioFinal = parseInt(calculoFinal(valorContado, cuotas))
         valorCuota = parseInt(calculoCuotas(valorContado, cuotas))
-        console.log("Debera abonar", cuotas, "cuotas de", "$", Math.trunc(parseFloat(calculoCuotas(valorContado, cuotas))))
+        console.log("Deberá abonar", cuotas, "cuotas de", "$", Math.trunc(parseFloat(calculoCuotas(valorContado, cuotas))))
         let timerInterval
         Swal.fire({
             timer: 1000,
@@ -95,7 +95,7 @@ function calcular() {
             Swal.fire({
                 position: 'center',
                 icon: 'success',
-                text: "Debera abonar\n" + cuotas + " de $" + Math.trunc(parseFloat(calculoCuotas(valorContado, cuotas))),
+                text: "Deberá abonar\n" + cuotas + " de $" + Math.trunc(parseFloat(calculoCuotas(valorContado, cuotas))),
                 showConfirmButton: true,
             })
         })
@@ -196,7 +196,7 @@ function ocultarCotizaciones() {
 
 
 function recuperarCotizaciones() {
-    // if (recargado == false) { BOTON DE RECARGAR COMPRAS CALCULOS ANTERIORES ANULADO, SE CORRE LA FUNCION AL CARGAR PAGINA
+    // if (recargado == false) { BOTÓN DE RECARGAR COMPRAS CÁLCULOS ANTERIORES ANULADO, SE CORRE LA FUNCIÓN AL CARGAR PAGINA
     if (localStorage.cotizaciones) {
         const cotizacionesGuardadas = JSON.parse(localStorage.getItem("cotizaciones"))
         cotizacionesGuardadas.forEach(cotizacion => {
@@ -239,7 +239,7 @@ const printTestimonios = (review) => {
 
 const printErrorTestomonios = () => {
     return `<div class="card-body">
-    <h4 class="mb-4">Proximamente vas a ver todo lo que nuestros clientes tienen para contarte!</h4>
+    <h4 class="mb-4">Próximamente vas a ver todo lo que nuestros clientes tienen para contarte!</h4>
     </div>`
 }
 
@@ -307,13 +307,13 @@ const btnCheckout =
                             <div class="form-group">
                             <label class="col-md-3 control-label" for="name">Nombre completo</label>
                             <div class="col">
-                                <input id="name" name="name" type="text" placeholder="Tu nombre" value ="juan perez" class="form-control">
+                                <input id="name" name="name" type="text" placeholder="Tu nombre" value ="Juan Perez" class="form-control">
                             </div>
                             </div>
                     
                         
                             <div class="form-group">
-                            <label class="col-md-3 control-label" for="email">tu correo electronico</label>
+                            <label class="col-md-3 control-label" for="email">Tu correo electrónico</label>
                             <div class="col">
                                 <input id="email" name="email" type="text" placeholder="Your email" value = "juancito@gmail.com" class="form-control">
                             </div>
@@ -323,7 +323,7 @@ const btnCheckout =
                             <div class="form-group">
                             <label class="col-md-3 control-label" for="message">Comentario (opcional)</label>
                             <div class="col ">
-                                <textarea class="form-control" id="message" name="message" placeholder="Dejanos tu mensaje" rows="5"></textarea>
+                                <textarea class="form-control" id="message" name="message" placeholder="Déjanos tu mensaje" rows="5"></textarea>
                             </div>
                             </div>
                     
